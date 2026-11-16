@@ -6,7 +6,7 @@ function MainConfig() {
   globalThis.qrexyIP = atob('Y2lwLnRyb25iYW5rLnNpdGU=');
 }
 function WebConfig() {
-	globalThis.ThisVersion = "3.4.2";
+	globalThis.ThisVersion = "3.4.3";
 	globalThis.AccessSubscription = "_SubscriptionURL_";
 	globalThis.AccessAdvancedConfig = "_AdvancedConfigURL_";  
 	globalThis.fpaths = 'js,css,assets,wp-content,themes,app,cdn,jquery,live';  //Path URL: First folder in Sub
@@ -826,7 +826,7 @@ function generate(){
     } 
                                                                                    
 
-config.value = atob("dmxlc3M=")+"://"+defalt_uuid+"@"+caddress+":"+cport+"?encryption=none&security=tls"+chost+""+cfingerprint+"&alpn=h2%2Chttp%2F1.1&type=ws"+csni+"&path=%2F"+cpath+"#%F0%9F%90%B2%20"+defalt_CnfgName;
+config.value = atob("dmxlc3M=")+"://"+defalt_uuid+"@"+caddress+":"+cport+"?encryption=none&security=tls"+chost+""+cfingerprint+"&alpn=http%2F1.1&type=ws"+csni+"&path=%2F"+cpath+"#%F0%9F%90%B2%20"+defalt_CnfgName;
 }
   const SetSub = (suburl) => {
     if(!suburl){suburl = subpath;}
@@ -1124,7 +1124,7 @@ async function getVVConfig() {
 	var vVvMain =
 	`${protocol}` +
 	`://${globalThis.UzKey}@${globalThis.hostName}:443`+
-	`?encryption=none&security=tls&sni=${globalThis.hostName}&fp=chrome&alpn=h2%2Chttp%2F1.1&type=ws&host=${globalThis.hostName}&path=%2F${pathForSub}#${CnfgCntr}%20-%20%F0%9F%90%89%20${globalThis.CnfgName}\n`;
+	`?encryption=none&security=tls&sni=${globalThis.hostName}&fp=chrome&alpn=http%2F1.1&type=ws&host=${globalThis.hostName}&path=%2F${pathForSub}#${CnfgCntr}%20-%20%F0%9F%90%89%20${globalThis.CnfgName}\n`;
 
   for (var thisIP of getDomainIP4s) {
   	    CnfgCntr++;
@@ -1139,7 +1139,7 @@ async function getVVConfig() {
     	vVvMain +=
 	     `${protocol}` +
 	     `://${globalThis.UzKey}@${thisIP}:${thisPrt}`+
-	     `?encryption=none&security=tls&sni=${globalThis.hostName}&fp=${thisFp}&allowInsecure=1&alpn=h2%2Chttp%2F1.1&type=ws&host=${globalThis.hostName}&path=%2F${pathForSub}#${CnfgCntr}%20-%20${thisIcn}%20${globalThis.CnfgName}\n`;
+	     `?encryption=none&security=tls&sni=${globalThis.hostName}&fp=${thisFp}&allowInsecure=1&alpn=http%2F1.1&type=ws&host=${globalThis.hostName}&path=%2F${pathForSub}#${CnfgCntr}%20-%20${thisIcn}%20${globalThis.CnfgName}\n`;
 
   }
   /*for (var thisIP of getDomainIPs.ipv6) {
